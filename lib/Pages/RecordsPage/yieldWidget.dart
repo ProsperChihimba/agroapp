@@ -12,21 +12,19 @@ class YieldPrediction extends StatelessWidget {
           padding: const EdgeInsets.symmetric(vertical: 90, horizontal: 30),
           margin: const EdgeInsets.only(top: 20),
           decoration: BoxDecoration(
-            color: const Color(0xff000000),
-            borderRadius: BorderRadius.circular(23),
-            boxShadow: [
-              BoxShadow(
-                color: const Color.fromARGB(255, 74, 73, 73).withOpacity(0.5),
-                spreadRadius: 5,
-                blurRadius: 7,
-                offset: const Offset(0, 3), // changes position of shadow
-              ),
-            ],
-          ),
+              color: const Color(0xff000000),
+              borderRadius: BorderRadius.circular(23),
+              boxShadow: [
+                BoxShadow(
+                    color: Colors.grey.withOpacity(0.6),
+                    offset: const Offset(0, 10),
+                    blurRadius: 5.0,
+                    spreadRadius: 0)
+              ]),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Text("Data"),
+              Text("data"),
               Text("Data"),
             ],
           )),

@@ -1,3 +1,4 @@
+import 'package:agroapp/Pages/RecordsPage/reports.dart';
 import 'package:agroapp/Pages/RecordsPage/yieldWidget.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
@@ -32,7 +33,11 @@ class _RecordsPageState extends State<RecordsPage>
                 )),
             YieldPrediction(),
             Gap(10),
-            Title(title: "Latest Reports")
+            Align(
+                alignment: Alignment.topLeft,
+                child: Title(title: "Latest Reports")),
+            Gap(5),
+            Reports()
           ]),
         ),
       ),
