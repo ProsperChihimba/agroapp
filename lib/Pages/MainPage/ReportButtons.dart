@@ -11,9 +11,9 @@ class ReportButtons extends StatelessWidget {
       children: [
         Expanded(
           child: Container(
-            padding: EdgeInsets.all(12),
+            padding: const EdgeInsets.all(12),
             decoration: BoxDecoration(
-                color: Color(0xff1D976C),
+                color: const Color(0xff1D976C),
                 borderRadius: BorderRadius.circular(5)),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
@@ -48,7 +48,7 @@ class ReportButtons extends StatelessWidget {
           child: Container(
             padding: const EdgeInsets.all(12),
             decoration: BoxDecoration(
-                color: Color(0xff93F9B9),
+                color: const Color(0xff93F9B9),
                 borderRadius: BorderRadius.circular(5)),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,

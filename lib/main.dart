@@ -1,3 +1,4 @@
+import 'package:agroapp/Pages/MainPage/News.dart';
 import 'package:agroapp/Pages/MainPage/NewsList.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -76,7 +77,9 @@ class _MyHomePageState extends State<MyHomePage> {
               const Gap(
                 10,
               ),
-              const NewsList()
+              const NewsList(),
+              const Gap(20),
+              const News()
             ],
           )),
         ));
