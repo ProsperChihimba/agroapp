@@ -24,20 +24,35 @@ class _RecordsPageState extends State<RecordsPage>
       child: Scaffold(
         backgroundColor: const Color(0xfff0f1f2),
         body: SingleChildScrollView(
-          child: Column(children: const [
+          child: Column(children: [
             //Title Container
-            Align(
+            const Align(
                 alignment: Alignment.topLeft,
                 child: Title(
                   title: 'Yield prediction',
                 )),
-            YieldPrediction(),
-            Gap(10),
-            Align(
-                alignment: Alignment.topLeft,
-                child: Title(title: "Latest Reports")),
-            Gap(5),
-            Reports()
+            const YieldPrediction(),
+            const Gap(10),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: const [
+                Align(
+                  alignment: Alignment.topLeft,
+                  child: Title(title: "Latest Reports"),
+                ),
+                Padding(
+                  padding: EdgeInsets.fromLTRB(0.0, 20.0, 25.0, 0),
+                  child: Icon(
+                    Icons.add_circle_outline,
+                    size: 25,
+                    // color: HexColor('#436CFD'),
+                  ),
+                ),
+              ],
+            ),
+
+            const Gap(5),
+            const Reports()
           ]),
         ),
       ),
