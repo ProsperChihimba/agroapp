@@ -20,7 +20,7 @@ class MainPage extends StatelessWidget {
               child: Column(
             children: [
               Container(
-                decoration: const BoxDecoration(color: Colors.white),
+                // decoration: const BoxDecoration(color: Colors.white),
                 padding: const EdgeInsets.symmetric(
                     vertical: 20.0, horizontal: 25.0),
                 child: Row(
@@ -29,11 +29,17 @@ class MainPage extends StatelessWidget {
                     Text(
                       "Agro",
                       style: GoogleFonts.calistoga(
-                          fontSize: 16,
+                          fontSize: 20,
                           fontWeight: FontWeight.w600,
                           color: const Color(0xff07B803)),
                     ),
-                    const Icon(Icons.notifications_outlined)
+                    Row(
+                      children: const [
+                        Icon(Icons.notifications_none_outlined),
+                        Gap(10),
+                        Icon(Icons.account_circle_outlined),
+                      ],
+                    )
                   ],
                 ),
               ),

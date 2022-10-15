@@ -9,7 +9,7 @@ class WeatherWidget extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 25.0),
       child: Container(
-          padding: const EdgeInsets.all(40),
+          padding: const EdgeInsets.symmetric(vertical: 50, horizontal: 30),
           margin: const EdgeInsets.only(top: 20),
           decoration: BoxDecoration(
               color: const Color(0xffFFFFFF),
@@ -25,7 +25,7 @@ class WeatherWidget extends StatelessWidget {
                     height: 40,
                   ),
                   const SizedBox(
-                    width: 10,
+                    width: 15,
                   ),
                   Column(
                     children: [

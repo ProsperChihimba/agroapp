@@ -41,9 +41,9 @@ class _MyHomePageState extends State<MyHomePage> {
         onTap: (index) => setState(() {
           currentIndex = index;
         }),
-        backgroundColor: Color(0xffEBFFEF),
+        backgroundColor: const Color(0xffEBFFEF),
         iconSize: 25,
-        fixedColor: Color(0xff07B803),
+        fixedColor: const Color(0xff07B803),
         items: const [
           BottomNavigationBarItem(
             icon: Icon(Icons.home_filled),

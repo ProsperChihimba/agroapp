@@ -14,7 +14,7 @@ class ReportButtons extends StatelessWidget {
             padding: const EdgeInsets.all(12),
             decoration: BoxDecoration(
                 color: const Color(0xff1D976C),
-                borderRadius: BorderRadius.circular(5)),
+                borderRadius: BorderRadius.circular(10)),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
@@ -49,7 +49,7 @@ class ReportButtons extends StatelessWidget {
             padding: const EdgeInsets.all(12),
             decoration: BoxDecoration(
                 color: const Color(0xff93F9B9),
-                borderRadius: BorderRadius.circular(5)),
+                borderRadius: BorderRadius.circular(10)),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
