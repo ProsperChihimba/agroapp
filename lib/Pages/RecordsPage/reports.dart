@@ -58,7 +58,7 @@ class _ReportsState extends State<Reports> {
                         height: 10,
                       ),
                       Text(
-                        "Msimu mpya",
+                        "3 Oct 2001",
                         style: GoogleFonts.lato(
                             fontSize: 13,
                             fontWeight: FontWeight.w500,

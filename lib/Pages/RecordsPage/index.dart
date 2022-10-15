@@ -29,7 +29,7 @@ class _RecordsPageState extends State<RecordsPage>
             const Align(
                 alignment: Alignment.topLeft,
                 child: Title(
-                  title: 'Yield prediction',
+                  title: 'Yield predictions',
                 )),
             const YieldPrediction(),
             const Gap(10),
