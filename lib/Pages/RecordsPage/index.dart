@@ -1,4 +1,6 @@
+import 'package:agroapp/Pages/RecordsPage/yieldWidget.dart';
 import 'package:flutter/material.dart';
+import 'package:gap/gap.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class RecordsPage extends StatefulWidget {
@@ -10,29 +12,38 @@ class RecordsPage extends StatefulWidget {
 
 class _RecordsPageState extends State<RecordsPage>
     with TickerProviderStateMixin {
-  late TabController _tabController;
-
   @override
   void initState() {
     super.initState();
-    _tabController = TabController(length: 3, vsync: this);
   }
 
   @override
   Widget build(BuildContext context) {
     return SafeArea(
-      child: SingleChildScrollView(
-        child: Column(children: [
-          //Title Container
-          const Title()
-        ]),
+      child: Scaffold(
+        backgroundColor: const Color(0xfff0f1f2),
+        body: SingleChildScrollView(
+          child: Column(children: const [
+            //Title Container
+            Align(
+                alignment: Alignment.topLeft,
+                child: Title(
+                  title: 'Yield prediction',
+                )),
+            YieldPrediction(),
+            Gap(10),
+            Title(title: "Latest Reports")
+          ]),
+        ),
       ),
     );
   }
 }
 
 class Title extends StatefulWidget {
-  const Title({super.key});
+  const Title({super.key, required this.title});
+
+  final String title;
 
   @override
   State<Title> createState() => _TitleState();
@@ -43,37 +54,11 @@ class _TitleState extends State<Title> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.fromLTRB(25.0, 10.0, 25.0, 0),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [
-          Text(
-            'Historia ya ripoti',
-            style: GoogleFonts.lato(
-                fontWeight: FontWeight.w800, fontSize: 16, color: Colors.black),
-          ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Text(
-                selectedDate.toIso8601String().split('T').first,
-                style: GoogleFonts.lato(
-                  fontWeight: FontWeight.w400,
-                  fontSize: 12,
-                  color: const Color(0xff9A9A9A),
-                ),
-              ),
-              const Padding(
-                padding: EdgeInsets.fromLTRB(1.0, 0, 0, 0),
-                child: Icon(
-                  Icons.keyboard_arrow_down_rounded,
-                  size: 25,
-                  color: Color(0xff143AFF),
-                ),
-              )
-            ],
-          ),
-        ],
+      padding: const EdgeInsets.fromLTRB(25.0, 20.0, 25.0, 0),
+      child: Text(
+        widget.title,
+        style: GoogleFonts.lato(
+            fontWeight: FontWeight.w900, fontSize: 16, color: Colors.black),
       ),
     );
   }
