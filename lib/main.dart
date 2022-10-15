@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:gap/gap.dart';
 
+import 'Pages/MainPage/HeaderText.dart';
 import 'Pages/MainPage/ReportButtons.dart';
 import 'Pages/MainPage/WeatherWidget.dart';
 
@@ -53,32 +55,23 @@ class _MyHomePageState extends State<MyHomePage> {
                   ],
                 ),
               ),
-              const SizedBox(
-                height: 10,
-              ),
-              Align(
-                alignment: Alignment.topLeft,
-                child: Padding(
-                  padding: const EdgeInsets.fromLTRB(25.0, 20.0, 5.0, 0),
-                  child: Text(
-                    'Weather forecast',
-                    style: GoogleFonts.lato(
-                        fontWeight: FontWeight.w700,
-                        fontSize: 15,
-                        color: Colors.black),
-                  ),
-                ),
-              ),
+              const Gap(10),
+              const HeaderText(title: "Weather forecast"),
               // Weather forecast widget
               const WeatherWidget(),
-              const SizedBox(
-                height: 40,
+              const Gap(
+                40,
               ),
               // Add reports widgets
               const Padding(
                 padding: EdgeInsets.symmetric(horizontal: 25.0),
                 child: ReportButtons(),
-              )
+              ),
+              // Crop news filter section
+              const Gap(
+                30,
+              ),
+              const HeaderText(title: "Crop news")
             ],
           )),
         ));

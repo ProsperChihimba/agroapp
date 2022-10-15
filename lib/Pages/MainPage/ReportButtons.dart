@@ -29,7 +29,7 @@ class ReportButtons extends StatelessWidget {
                       ),
                     ),
                     Text(
-                      'Add Report',
+                      'Add Record',
                       style: GoogleFonts.lato(
                           fontWeight: FontWeight.w700,
                           fontSize: 15,
